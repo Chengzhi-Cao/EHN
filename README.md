@@ -1,7 +1,7 @@
 # EHN
 
 <!-- <img src= "https://github.com/Chengzhi-Cao/SC-Net/blob/main/pic/network.png" width="100%"> -->
-<img src= "pic/results.jpg" width="100%">
+<!-- <img src= "pic/results.jpg" width="100%"> -->
 
 This repository provides the official PyTorch implementation of the following paper:
 
@@ -77,19 +77,9 @@ Synheavy
 
 To train SCNet , run the command below:
 
-``` python main.py --model_name "SCNet" --mode "train_event_Temporal" --data_dir "dataset/GOPRO" ```
+``` python train_derain_real.py -opt your_option.yml -save_dir your_save_path```
 
 Model weights will be saved in ``` results/model_name/weights``` folder.
-
-
-## Test
-
-To test SCNet , run the command below:
-
-``` python main.py --model_name "SCNet" --mode "test" --data_dir "dataset/GOPRO" --test_model "xxx.pkl" ```
-
-Output images will be saved in ``` results/model_name/result_image``` folder.
-
 
 
 ## Performance
@@ -100,7 +90,7 @@ Output images will be saved in ``` results/model_name/result_image``` folder.
 
 
 
-## Citation
+<!-- ## Citation -->
 
 <!-- ```
 @ARTICLE{10314003,
