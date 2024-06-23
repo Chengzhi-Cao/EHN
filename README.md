@@ -114,5 +114,5 @@ The  code is based on the paper:
 
 
 ## Contact
-Should you have any question, please contact chengzhicao@mail.ustc.edu.cn.
+If you have any question, please contact chengzhicao@mail.ustc.edu.cn.
 
