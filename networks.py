@@ -27,16 +27,7 @@ import models.archs_derain.VRGNet as VRGNet
 import models.archs_derain.SPANet as SPANet
 import models.archs_derain.DuRN as DuRN
 import models.archs_derain.DCSFN as DCSFN
-import models.archs_derain.JDNet_event as JDNet_event
-import models.archs_derain.MPRNet_event as MPRNet_event
-import models.archs_derain.RIDNet_event as RIDNet_event
-import models.archs_derain.RLNet_event as RLNet_event
-import models.archs_derain.VRGNet_event as VRGNet_event
-import models.archs_derain.SPANet_event as SPANet_event
-import models.archs_derain.DuRN_event as DuRN_event
-import models.archs_derain.DCSFN_event as DCSFN_event
 import models.archs_derain.ESTIL as ESTIL
-import models.archs_derain.ESTIL_event as ESTIL_event
 import models.archs_derain.STRAHN_visual as STRAHN_visual
 
 
@@ -95,25 +86,6 @@ def define_G(opt):
     elif which_model == 'ESTIL':
         netG = ESTIL.ESTIL()
 
-    elif which_model == 'JDNet_event':
-        netG = JDNet_event.JDNet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'MPRNet_event':
-        netG = MPRNet_event.MPRNet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'RIDNet_event':
-        netG = RIDNet_event.RIDNet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'RLNet_event':
-        netG = RLNet_event.RLNet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'VRGNet_event':
-        netG = VRGNet_event.VRGNet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'DCSFN_event':
-        netG = DCSFN_event.DCSFN_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'SPANet_event':
-        netG = SPANet_event.SPANet_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-    elif which_model == 'DuRN_event':
-        netG = DuRN_event.DuRN_event(in_nc=opt_net['in_nc'], out_nc=opt_net['out_nc'])
-
-    elif which_model == 'ESTIL_event':
-        netG = ESTIL_event.ESTIL_event()
     
     
     ################################### dehaze
