@@ -1,0 +1,37 @@
+#### general settings
+name: DPT_Eventx2_HQF
+use_tb_logger: True
+model: sr
+distortion: sr
+scale: 2
+save_img: True
+gpu_ids: [0]
+
+#### network structures
+network_G:
+  which_model_G: DPT
+  in_nc: 3
+  out_nc: 3
+  nf: 40
+  unf: 24
+  nb: 16
+  scale: 2
+
+#### datasets
+
+datasets:
+  test1:
+    name: HQF
+    mode: LQGT_event
+    dataroot_GT: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_HQF/img_lrx2
+    dataroot_LQ: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_HQF/img_lrx2
+    dataroot_event: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_HQF/mat
+    dataroot_event_H5: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_HQF/H5/mat_180_320.h5
+    dataroot_event_H5_40: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_HQF/H5/mat_180_320_channel_40.h5
+
+
+
+
+#### path
+path:
+  pretrain_model_G: /ghome/caocz/code/Event_Camera/Event_driven_SR/PAN/experiments/DPT_Eventx2_EvInt/models/latest_G.pth

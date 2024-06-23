@@ -1,0 +1,29 @@
+name: PANx4_eSL
+suffix: ~  # add suffix to saved images
+model: sr
+distortion: sr
+scale: 4
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+save_img: True
+gpu_ids: [0]
+
+datasets:
+  test1:
+    name: eSL
+    mode: LQGT
+    dataroot_GT: /gdata1/caocz/Event_Camera/SR/WithSR/Val_WithSR/HR
+    dataroot_LQ: /gdata1/caocz/Event_Camera/SR/WithSR/Val_WithSR/LR
+
+#### network structures
+network_G:
+  which_model_G: PAN
+  in_nc: 3
+  out_nc: 3
+  nf: 40
+  unf: 24
+  nb: 16
+  scale: 4
+
+#### path
+path:
+  pretrain_model_G: /ghome/caocz/code/Event_Camera/Event_SR/PAN/experiments/PANx4_eSL/models/55000_G.pth

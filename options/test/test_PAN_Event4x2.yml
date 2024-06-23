@@ -1,0 +1,37 @@
+#### general settings
+name: PANx2_EvInt
+suffix: ~  # add suffix to saved images
+model: sr
+distortion: sr
+scale: 2
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+save_img: True
+gpu_ids: [0]
+
+#### network structures
+network_G:
+  which_model_G: PAN_Event4
+  in_nc: 3
+  out_nc: 3
+  nf: 40
+  unf: 24
+  nb: 16
+  scale: 2
+
+
+datasets:
+  test1:
+    name: EvInt_valid
+    mode: LQGT_event
+    dataroot_GT: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_tiny/img_lrx2
+    dataroot_LQ: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_tiny/img_lrx4
+    dataroot_event: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_tiny/mat_180_320
+    dataroot_event_H5: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_tiny/H5/mat_180_320.h5
+    dataroot_event_H5_40: /gdata1/caocz/Event_Camera/SR/EvInt_SR/test_tiny/H5/mat_180_320_channel_40.h5
+
+
+
+
+#### path
+path:
+  pretrain_model_G: /ghome/caocz/code/Event_Camera/Event_driven_SR/PAN/experiments/PAN_Event4x2_EvInt/models/latest_G.pth
