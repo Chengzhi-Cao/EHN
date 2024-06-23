@@ -29,9 +29,9 @@ This repository provides the official PyTorch implementation of the following pa
 
 
 - Download Derain dataset：
-  - Synlight: 
-  - Synheavy:
-  - NTU: 
+  - Synlight: https://pan.baidu.com/s/1YiSLRVZSvyXziX2qxAruTw (e2xt) 
+  - Synheavy: https://pan.baidu.com/s/1alRpMX_ZT6K5wh18bUw1aA (9n9w)
+  - NTU: https://pan.baidu.com/s/17a6vlVGq5gcbiP9yxbnpzQ (lmdv)
 
 
 
@@ -42,26 +42,34 @@ This repository provides the official PyTorch implementation of the following pa
 After preparing data set, the data folder should be like the format below:
 
 ```
-GOPRO
+Synheavy
 ├─ train
-│ ├─ blur    % 2103 image pairs
-│ │ ├─ xxxx.png
+│ ├─ input    
 │ │ ├─ ......
 │ │
-│ ├─ sharp
-│ │ ├─ xxxx.png
+│ ├─ GT
 │ │ ├─ ......
 │
-├─ test    % 1111 image pairs
-│ ├─ ...... (same as train)
-
+│ ├─ mat
+│ │ ├─ ......
+│
+│ ├─ H5
+│ │ ├─ ......
+│
+├─ test
+│ ├─ input    
+│ │ ├─ ......
+│ │
+│ ├─ GT
+│ │ ├─ ......
+│
+│ ├─ mat
+│ │ ├─ ......
+│
+│ ├─ H5
+│ │ ├─ ......
+│
 ```
-
-- Utilize [V2E](https://github.com/SensorsINI/v2e) to generate the corresponding event sequence.
-
-- Preprocess events by running the command below:
-
-  ``` python data/dataset_event.py```
 
 
 
@@ -107,12 +115,12 @@ Output images will be saved in ``` results/model_name/result_image``` folder.
   doi={10.1109/TNNLS.2023.3329741}}
 ``` -->
 
-## Notes and references
+<!-- ## Notes and references
 The  code is based on the paper:
 
 'Rethinking Coarse-to-Fine Approach in Single Image Deblurring'(https://arxiv.org/abs/2108.05054)
 
-'Event-driven Video Deblurring via Spatio-Temporal Relation-Aware Network'(https://www.ijcai.org/proceedings/2022/112)
+'Event-driven Video Deblurring via Spatio-Temporal Relation-Aware Network'(https://www.ijcai.org/proceedings/2022/112) -->
 
 
 ## Contact
